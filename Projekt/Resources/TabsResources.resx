@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="rxSymbol" xml:space="preserve">
+    <value>Symbol:</value>
+  </data>
+  <data name="rxNazwa" xml:space="preserve">
+    <value>Nazwa:</value>
+  </data>
+  <data name="rxTyp" xml:space="preserve">
+    <value>Typ:</value>
+  </data>
+  <data name="rxNazwaPelna" xml:space="preserve">
+    <value>Nazwa pełna:</value>
+  </data>
+  <data name="rxUlica" xml:space="preserve">
+    <value>Ulica:</value>
+  </data>
+  <data name="rxNrDomu" xml:space="preserve">
+    <value>Nr domu:</value>
+  </data>
+  <data name="rxNrLokalu" xml:space="preserve">
+    <value>Nr lokalu:</value>
+  </data>
+  <data name="rxKodPocztowy" xml:space="preserve">
+    <value>Kod pocztowy:</value>
+  </data>
+  <data name="rxWojewodztwo" xml:space="preserve">
+    <value>Województwo:</value>
+  </data>
+  <data name="rxPanstwo" xml:space="preserve">
+    <value>Państwo:</value>
+  </data>
+  <data name="rxWojewodztwa_dolnoslaskie" xml:space="preserve">
+    <value>dolnośląskie</value>
+  </data>
+  <data name="rxWojewodztwa_opolskie" xml:space="preserve">
+    <value>opolskie</value>
+  </data>
+  <data name="rxWojewodztwa_slaskie" xml:space="preserve">
+    <value>śląskie</value>
+  </data>
+  <data name="rxCentrumKart" xml:space="preserve">
+    <value>Centrum autoryzacji kart płatniczych</value>
+  </data>
+  <data name="rxCentrumObRat" xml:space="preserve">
+    <value>Centrum obsługi ratalnej</value>
+  </data>
+  <data name="rxCzynnyVat" xml:space="preserve">
+    <value>Czynny podatnik VAT</value>
+  </data>
+  <data name="rxEmail" xml:space="preserve">
+    <value>E-mail:</value>
+  </data>
+  <data name="rxNip" xml:space="preserve">
+    <value>NIP:</value>
+  </data>
+  <data name="rxNrEori" xml:space="preserve">
+    <value>Numer EORI:</value>
+  </data>
+  <data name="rxOdbiorcaDetal" xml:space="preserve">
+    <value>Odbiorca detaliczny</value>
+  </data>
+  <data name="rxPanstwo_Francja" xml:space="preserve">
+    <value>Francja</value>
+  </data>
+  <data name="rxPanstwo_Niemcy" xml:space="preserve">
+    <value>Niemcy</value>
+  </data>
+  <data name="rxPanstwo_Polska" xml:space="preserve">
+    <value>Polska</value>
+  </data>
+  <data name="rxRegon" xml:space="preserve">
+    <value>REGON:</value>
+  </data>
+  <data name="rxWWW" xml:space="preserve">
+    <value>Strona WWW:</value>
+  </data>
+  <data name="rxDodaj" xml:space="preserve">
+    <value>Dodaj:</value>
+  </data>
+  <data name="rxDopiszNotatke" xml:space="preserve">
+    <value>Dopisz notatke:</value>
+  </data>
+  <data name="rxDrukuj" xml:space="preserve">
+    <value>Drukuj:</value>
+  </data>
+  <data name="rxPokaż" xml:space="preserve">
+    <value>Pokaż:</value>
+  </data>
+  <data name="rxPopraw" xml:space="preserve">
+    <value>Popraw:</value>
+  </data>
+  <data name="rxWypiszDokument" xml:space="preserve">
+    <value>Wypisz dokument:</value>
+  </data>
+  <data name="rxWypiszDokument_FaktureVatSprze" xml:space="preserve">
+    <value>Fakturę VAT sprzedaży</value>
+  </data>
+  <data name="rxWypiszDokument_ParagonImienny" xml:space="preserve">
+    <value>Paragon imienny</value>
+  </data>
+  <data name="rxWypiszDokument_Rachunek" xml:space="preserve">
+    <value>Rachunek sprzedaży</value>
+  </data>
+  <data name="rxWypiszDokument_ZamowienieDoDostawcy" xml:space="preserve">
+    <value>Zamówienie do dostawcy</value>
+  </data>
+  <data name="rxWypiszDokument_ZamowienieOdKlienta" xml:space="preserve">
+    <value>Zamówienie od Klienta</value>
+  </data>
+  <data name="rxListaKontrahentowAdres" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+  <data name="rxListaKontrahentowMiejscowosc" xml:space="preserve">
+    <value>Miejscowość</value>
+  </data>
+  <data name="rxListaKontrahentowNazwa" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="rxListaKontrahentowNip" xml:space="preserve">
+    <value>NIP</value>
+  </data>
+  <data name="rxListaKontrahentowRodzaj" xml:space="preserve">
+    <value>Rodzaj</value>
+  </data>
+  <data name="rxListaKontrahentowSymbol" xml:space="preserve">
+    <value>Symbol</value>
+  </data>
+  <data name="rxListaKontrahentowTyp" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="rxKomplet" xml:space="preserve">
+    <value>Komplet</value>
+  </data>
+  <data name="rxRodzaj" xml:space="preserve">
+    <value>Rodzaj:</value>
+  </data>
+  <data name="rxTowar" xml:space="preserve">
+    <value>Towar</value>
+  </data>
+  <data name="rxUsluga" xml:space="preserve">
+    <value>Usluga</value>
+  </data>
+  <data name="nrTowarPodatek0" xml:space="preserve">
+    <value>Podatek VAT 0%</value>
+  </data>
+  <data name="nrTowarPodatek5" xml:space="preserve">
+    <value>Podatek VAT 5%</value>
+  </data>
+  <data name="nrTowarPodatek8" xml:space="preserve">
+    <value>Podatek VAT 8%</value>
+  </data>
+  <data name="nrTowarPodstawowyPodatek23" xml:space="preserve">
+    <value>Podstawowy podatek VAT 23%</value>
+  </data>
+  <data name="rxTowarKalkulacjaCen" xml:space="preserve">
+    <value>Kalkulacja cen</value>
+  </data>
+  <data name="rxTowarKodTowaruCN" xml:space="preserve">
+    <value>Kod towaru CN:</value>
+  </data>
+  <data name="rxTowarOpis" xml:space="preserve">
+    <value>Opis:</value>
+  </data>
+  <data name="rxTowarOznJPKVAT" xml:space="preserve">
+    <value>Ozn. JPK VAT:</value>
+  </data>
+  <data name="rxTowarPKWiU" xml:space="preserve">
+    <value>PKWiU:</value>
+  </data>
+  <data name="rxTowarPodsJednostka" xml:space="preserve">
+    <value>Podstawowa jednostka miary:</value>
+  </data>
+  <data name="rxTowarStawkaVat" xml:space="preserve">
+    <value>Stawka Vat:</value>
+  </data>
+  <data name="rxTowarSWW" xml:space="preserve">
+    <value>SWW:</value>
+  </data>
+  <data name="rxTowarJPKVAT_01" xml:space="preserve">
+    <value>GTU_01 - Napoje alkoholowe</value>
+  </data>
+  <data name="rxTowarJPKVAT_02" xml:space="preserve">
+    <value>GTU_02 - Paliwa</value>
+  </data>
+  <data name="rxTowarJPKVAT_03" xml:space="preserve">
+    <value>GTU_03 - Odpady</value>
+  </data>
+  <data name="rxTowarJPKVAT_04" xml:space="preserve">
+    <value>GTU_04 - Wyroby tytoniowe</value>
+  </data>
+  <data name="rxTowarJPKVAT_NieWymaga" xml:space="preserve">
+    <value>(nie wymaga oznaczenia)</value>
+  </data>
+  <data name="rxListaFakturDodaj" xml:space="preserve">
+    <value>Dodaj:</value>
+  </data>
+  <data name="rxListaFakturDodFm" xml:space="preserve">
+    <value>Dodaj fakturę marża</value>
+  </data>
+  <data name="rxListaFakturDodFs" xml:space="preserve">
+    <value>Dodaj fakturę sprzedaży</value>
+  </data>
+  <data name="rxListaFakturDodRs" xml:space="preserve">
+    <value>Dodaj rachunek sprzedaży</value>
+  </data>
+  <data name="rxListaFakturKolData" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="rxListaFakturKolKontrahent" xml:space="preserve">
+    <value>Kontrahent</value>
+  </data>
+  <data name="rxListaFakturKolNumer" xml:space="preserve">
+    <value>Numer</value>
+  </data>
+  <data name="rxListaFakturKolStatus" xml:space="preserve">
+    <value>Status dokumentu</value>
+  </data>
+  <data name="rxListaFakturKolStatusFis" xml:space="preserve">
+    <value>Status fiskalny</value>
+  </data>
+  <data name="rxListaFakturKolWartoscBrutto" xml:space="preserve">
+    <value>Wartość brutto</value>
+  </data>
+  <data name="rxListaFakturKolWartoscNetto" xml:space="preserve">
+    <value>Wartość netto</value>
+  </data>
+  <data name="rxListaFakturKoryguj" xml:space="preserve">
+    <value>Koryguj:</value>
+  </data>
+  <data name="rxListaFakturRozlicz" xml:space="preserve">
+    <value>Rozlicz:</value>
+  </data>
+  <data name="rxListaTowarowDetalicznaBrutto" xml:space="preserve">
+    <value>Detaliczna brutto</value>
+  </data>
+  <data name="rxListaTowarowKolDetalicznaNetto" xml:space="preserve">
+    <value>Detaliczna netto</value>
+  </data>
+  <data name="rxListaTowarowKolDostepne" xml:space="preserve">
+    <value>Dostepne</value>
+  </data>
+  <data name="rxListaTowarowKolHurtowaBrutto" xml:space="preserve">
+    <value>Hurtowa brutto</value>
+  </data>
+  <data name="rxListaTowarowKolHurtowaNetto" xml:space="preserve">
+    <value>Hurtowa netto</value>
+  </data>
+  <data name="rxListaTowarowKolJm" xml:space="preserve">
+    <value>J.m.</value>
+  </data>
+  <data name="rxListaTowarowKolNazwa" xml:space="preserve">
+    <value>Symbol</value>
+  </data>
+  <data name="rxListaTowarowKolRezerwacja" xml:space="preserve">
+    <value>Rezerwacja</value>
+  </data>
+  <data name="rxListaTowarowKolRodzaj" xml:space="preserve">
+    <value>Rodzaj</value>
+  </data>
+  <data name="rxListaTowarowKolStan" xml:space="preserve">
+    <value>Stan</value>
+  </data>
+  <data name="rxListaTowarowKolSymbol" xml:space="preserve">
+    <value>Symbol</value>
+  </data>
+  <data name="rxListaTowarowRozmontuj" xml:space="preserve">
+    <value>Rozmontuj:</value>
+  </data>
+  <data name="rxListaTowarowZmontuj" xml:space="preserve">
+    <value>Zmontuj:</value>
+  </data>
+  <data name="rxTowarCennikBrutto" xml:space="preserve">
+    <value>Brutto</value>
+  </data>
+  <data name="rxTowarCennikNazwaCeny" xml:space="preserve">
+    <value>Nazwa ceny</value>
+  </data>
+  <data name="rxTowarCennikNazwaWaluta" xml:space="preserve">
+    <value>Waluta</value>
+  </data>
+  <data name="rxTowarCennikNetto" xml:space="preserve">
+    <value>Netto</value>
+  </data>
+  <data name="rxTowarKpl" xml:space="preserve">
+    <value>kpl.</value>
+  </data>
+  <data name="rxTowarSzt" xml:space="preserve">
+    <value>szt.</value>
+  </data>
+  <data name="rxWystawFaktureAnuluj" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="rxWystawFaktureDataZakonczenia" xml:space="preserve">
+    <value>Data zakończenia dostawy</value>
+  </data>
+  <data name="rxWystawFaktureDodajIWstawKontrahenta" xml:space="preserve">
+    <value>Dodaj i wstaw kontrahenta</value>
+  </data>
+  <data name="rxWystawFaktureDoZaplaty" xml:space="preserve">
+    <value>Do zapłaty: 0,00 PLN</value>
+  </data>
+  <data name="rxWystawFaktureFS" xml:space="preserve">
+    <value>FS</value>
+  </data>
+  <data name="rxWystawFaktureGotowka" xml:space="preserve">
+    <value>Gotówka:</value>
+  </data>
+  <data name="rxWystawFaktureKredyt" xml:space="preserve">
+    <value>Kredyt kupiecki:</value>
+  </data>
+  <data name="rxWystawFaktureListaKontrahentow" xml:space="preserve">
+    <value>Lista kontrahentów</value>
+  </data>
+  <data name="rxWystawFaktureNabywca" xml:space="preserve">
+    <value>Nabywca</value>
+  </data>
+  <data name="rxWystawFaktureOdebral" xml:space="preserve">
+    <value>Odebrał(a):</value>
+  </data>
+  <data name="rxWystawFaktureOdebralJas" xml:space="preserve">
+    <value>Jas Kapela</value>
+  </data>
+  <data name="rxWystawFaktureOdebralWaider" xml:space="preserve">
+    <value>Lord Wejder</value>
+  </data>
+  <data name="rxWystawFakturePokaz" xml:space="preserve">
+    <value>Pokaż</value>
+  </data>
+  <data name="rxWystawFakturePomoc" xml:space="preserve">
+    <value>Pomoc</value>
+  </data>
+  <data name="rxWystawFakturePopraw" xml:space="preserve">
+    <value>Popraw</value>
+  </data>
+  <data name="rxWystawFakturePrzedplata" xml:space="preserve">
+    <value>Przedpłata:</value>
+  </data>
+  <data name="rxWystawFakturePrzelew" xml:space="preserve">
+    <value>Przelew:</value>
+  </data>
+  <data name="rxWystawFaktureWstawKontrahenta" xml:space="preserve">
+    <value>Wstaw kontrahenta jednorazowego</value>
+  </data>
+  <data name="rxWystawFaktureWystawil" xml:space="preserve">
+    <value>Wystawił(a):</value>
+  </data>
+  <data name="rxWystawFaktureWystawilKowalski" xml:space="preserve">
+    <value>Jan Kowalski</value>
+  </data>
+  <data name="rxWystawFaktureWystawilNowa" xml:space="preserve">
+    <value>Andrzej Nowak</value>
+  </data>
+  <data name="rxWystawFaktureZapisz" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+</root>

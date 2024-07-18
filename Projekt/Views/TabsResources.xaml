@@ -1,0 +1,159 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Thickness x:Key="SmallThickness">2</Thickness>
+    <Thickness x:Key="MediumThickness">4</Thickness>
+    <Thickness x:Key="LargeThickness">8</Thickness>
+    
+    <Thickness x:Key="MarginThickness">5</Thickness>
+
+    
+
+    <!--Użycie:-->
+    <!--<Setter Property="Margin" Value="{StaticResource SmallThickness}"/>-->
+
+
+
+    <Color x:Key="PrimaryKey">#cfa227</Color>
+    <Color x:Key="SecondaryKey">#d66a22</Color>
+    <Color x:Key="AccentKey">#ba1eab</Color>
+
+    <SolidColorBrush x:Key="PrimaryColidColorBrush" Color="{StaticResource PrimaryKey}"/>
+    <SolidColorBrush x:Key="SecondaryColidColorBrush" Color="{StaticResource SecondaryKey}"/>
+    <SolidColorBrush x:Key="AccentColidColorBrush" Color="{StaticResource AccentKey}"/>
+
+    <!--Użycie:
+    <Setter Property="Background" Value="{StaticResource AccentColidColorBrush}"/>-->
+
+    <!--<Style x:Key="TabsNaglowekRowFirst" TargetType="{x:Type Grid}">
+        <Setter Property="Height" Value="80"/>
+    </Style>-->
+
+    <Style x:Key="TabsSeparator" TargetType="{x:Type Separator}">
+        <Setter Property="Height" Value="4px"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Margin" Value="{StaticResource MarginThickness}"/>
+    </Style>
+    
+    
+    <!-- LABEL STYLE -->
+    <Style TargetType="{x:Type Label}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+    <Style x:Key="LabelNameInside" TargetType="{x:Type Label}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Margin" Value="20,0,0,0"/>
+    </Style>
+
+    <!-- LABEL STYLE ##END## -->
+
+    <Style TargetType="{x:Type Button}" x:Key="ButtonOnTabs">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC8C8C8" Offset="0.781"/>
+                    <GradientStop Color="#FFEAEAEA" Offset="0.117"/>
+                    <GradientStop Color="#FFC8C8C8" Offset="0.972"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Background" Value="Azure"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+    <Style TargetType="{x:Type CheckBox}">
+        <Setter Property="Margin" Value="{StaticResource SmallThickness}"/>
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style TargetType="{x:Type TextBox}">
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+       
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="6,0,6,0"/>
+    </Style>
+    <Style TargetType="{x:Type ComboBox}"  x:Key="DefaultComboBox" >
+        <Setter Property="Height" Value="30px"/>
+        <Setter Property="Margin" Value="3"/>
+        <Setter Property="Padding" Value="6,0,6,0"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+    <Style TargetType="{x:Type DatePicker}">
+        <Setter Property="Margin" Value="3"/>
+    </Style>
+    <Style TargetType="{x:Type GroupBox}">
+        <Setter Property="Margin" Value="{StaticResource SmallThickness}"/>
+        <Setter Property="Padding" Value="8" />
+    </Style>
+    
+    <Style x:Key="DataGridColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Width" Value="100" />
+    </Style>
+    
+    <Style x:Key="DataGridStandardowy" TargetType="{x:Type DataGrid}">
+        <Setter Property="ColumnHeaderStyle" Value="{StaticResource DataGridColumnHeaderStyle}" />
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <!--<Setter Property="RowHeaderStyle" Value="{StaticResource DataGridRowHeaderStyle}" />-->
+    </Style>
+
+    <Style x:Key="TabWrapPanel" TargetType="{x:Type WrapPanel}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+
+
+    <Style TargetType="{x:Type DatePicker}" x:Key="TabsPicker">
+        <Setter Property="Height" Value="30px"/>
+        <Setter Property="Margin" Value="5px"/>
+        
+
+    </Style>
+    
+
+
+
+
+    <Style TargetType="{x:Type Border}" x:Key="DefaultBorder" >
+        <Setter Property="Margin" Value="5"/>
+       
+       
+    
+    
+        <!--<Setter Property="Margin" Value="3"/>
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="LightGray" />
+        <Setter Property="Padding" Value="4" />-->
+        <!--BasedOn="{StaticResource MyButtonStyle}">-->
+    </Style>
+    <Style TargetType="{x:Type Border}" BasedOn="{StaticResource DefaultBorder}" x:Key="TexBoxBorder">
+        <Setter Property="Height" Value="30px"/>
+    </Style>
+    
+    
+    <Style TargetType="{x:Type ComboBox}" x:Key="ComboBoxBorder" BasedOn="{StaticResource DefaultComboBox}">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Height" Value="30px"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style TargetType="{x:Type CheckBox}" x:Key="MyDefaultCheckBox">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Margin" Value="10,20,0,0"/>
+    </Style>
+    <!--We add converters to resources-->
+    <!--<converters:DateTimeInWordsDateConverter x:Key="DateTimeInWordsDateConverter"/>-->
+
+
+</ResourceDictionary>

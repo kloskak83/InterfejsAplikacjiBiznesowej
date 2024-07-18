@@ -1,0 +1,181 @@
+﻿<UserControl x:Class="Projekt.Views.DodajFaktureView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Projekt.Views"
+             xmlns:vm="clr-namespace:Projekt.ViewModels"
+             xmlns:resx="clr-namespace:Projekt.Resources"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <ResourceDictionary Source="TabsResources.xaml"/>
+    </UserControl.Resources>
+    <d:UserControl.DataContext>
+        <vm:DodajFaktureViewModel/>
+    </d:UserControl.DataContext>
+
+    <Grid Background="#e1e1e1" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Content="FS: (autro)/2023" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+                <StackPanel Grid.Column="1" Grid.Row="0" >
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Top">
+                    <Border MinWidth="200px" Style="{StaticResource TexBoxBorder}">
+                        <TextBox Text="Wrocław" HorizontalContentAlignment="Right" />
+                    </Border>
+                    <DatePicker Style="{StaticResource TabsPicker}" VerticalContentAlignment="Center"></DatePicker>                    
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Top">
+                        <Border MinWidth="200px" Style="{StaticResource TexBoxBorder}">
+                            <Label Content="{x:Static resx:TabsResources.rxWystawFaktureDataZakonczenia}" HorizontalContentAlignment="Right" HorizontalAlignment="Right"></Label>
+                        </Border>
+                        <DatePicker Style="{StaticResource TabsPicker}" VerticalContentAlignment="Center"></DatePicker>
+                </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="1*" MaxWidth="120" />
+                    <ColumnDefinition Width="auto" MinWidth="620"/>
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <ComboBox  Grid.Column="0" Grid.Row="0"   MinWidth="100px"  Style="{StaticResource ComboBoxBorder}" VerticalAlignment="Top">
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.rxWystawFaktureNabywca}" IsSelected="True"/>
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.rxWystawFaktureListaKontrahentow}"/>
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.rxWystawFaktureDodajIWstawKontrahenta}"/>
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.rxWystawFaktureWstawKontrahenta}"/>
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.rxWystawFakturePopraw}"/>
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.rxWystawFakturePokaz}"/>
+                </ComboBox>
+                <StackPanel Grid.Column="1" Grid.Row="0">
+                <Border MinWidth="400px" Style="{StaticResource TexBoxBorder}">
+                    <TextBox Text="Firma Kogucik "/>
+                </Border>
+                    <Border MinWidth="200px" Style="{StaticResource TexBoxBorder}">
+                        <TextBox Text="Na wzgórku 12, 19-100 Gołdap, 5482234021"/>
+                    </Border>
+                </StackPanel >
+                <StackPanel  Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20,0,0,0" >
+                    <Button Margin="5" Style="{StaticResource ButtonOnTabs}" Content="+" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    <Button Margin="5" Style="{StaticResource ButtonOnTabs}" Content="Lista"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <DataGrid Height="200px">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaTowarowKolRodzaj}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaTowarowKolSymbol}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaTowarowKolNazwa}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaTowarowKolStan}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaTowarowKolRezerwacja}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaTowarowKolDostepne}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaTowarowKolJm}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaTowarowDetalicznaBrutto}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaTowarowKolDetalicznaNetto}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaTowarowKolHurtowaBrutto}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaTowarowKolHurtowaNetto}" />
+                </DataGrid.Columns>                
+            </DataGrid>
+            <Label Content="Do zapłaty: 0,00 PLN" FontSize="18" HorizontalAlignment="Right"/>
+        </StackPanel>
+        <Grid Grid.Column="0" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>                    
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                    <Label Content="{x:Static resx:TabsResources.rxWystawFaktureWystawil}" Width="100px"/>
+                    <ComboBox  Grid.Column="0" Grid.Row="0"   MinWidth="200px"  Style="{StaticResource ComboBoxBorder}" VerticalAlignment="Top">
+                        <ComboBoxItem Content="{x:Static resx:TabsResources.rxWystawFaktureOdebralJas}" IsSelected="True"/>
+                        <ComboBoxItem Content="{x:Static resx:TabsResources.rxWystawFaktureOdebralWaider}"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                    <Label Content="{x:Static resx:TabsResources.rxWystawFaktureOdebral}" Width="100px"/>
+                    <ComboBox  Grid.Column="0" Grid.Row="0"   MinWidth="200px"  Style="{StaticResource ComboBoxBorder}" VerticalAlignment="Top">
+                        <ComboBoxItem Content="{x:Static resx:TabsResources.rxWystawFaktureWystawilKowalski}" IsSelected="True"/>
+                        <ComboBoxItem Content="{x:Static resx:TabsResources.rxWystawFaktureWystawilNowa}"/>
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                    <Label Content="{x:Static resx:TabsResources.rxWystawFakturePrzedplata}" Width="100px"/>
+                    <RadioButton VerticalAlignment="Center"/>
+                    <Border Width="50px" Style="{StaticResource TexBoxBorder}">
+                        <TextBox Text="100%"/>
+                    </Border>
+                    <Label Content="=" Width="100px"/>
+                    <Border Width="50px" Style="{StaticResource TexBoxBorder}">
+                        <TextBox Text="19,95"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                    <Label Content="{x:Static resx:TabsResources.rxWystawFaktureGotowka}" Width="100px"/>
+                    <RadioButton VerticalAlignment="Center"/>
+                    <Border Width="50px" Style="{StaticResource TexBoxBorder}">
+                        <TextBox Text="100%"/>
+                    </Border>
+                    <Label Content="=" Width="100px"/>
+                    <Border Width="50px" Style="{StaticResource TexBoxBorder}">
+                        <TextBox Text="19,95"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal">
+                    <Label Content="{x:Static resx:TabsResources.rxWystawFakturePrzelew}" Width="100px"/>
+                    <RadioButton VerticalAlignment="Center"/>
+                    <Border Width="50px" Style="{StaticResource TexBoxBorder}">
+                        <TextBox Text="100%"/>
+                    </Border>
+                    <Label Content="=" Width="100px"/>
+                    <Border Width="50px" Style="{StaticResource TexBoxBorder}">
+                        <TextBox Text="19,95"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal">
+                    <Label Content="{x:Static resx:TabsResources.rxWystawFaktureKredyt}" Width="100px"/>
+                    <RadioButton VerticalAlignment="Center"/>
+                    <Border Width="50px" Style="{StaticResource TexBoxBorder}">
+                        <TextBox Text="100%"/>
+                    </Border>
+                    <Label Content="=" Width="100px"/>
+                    <Border Width="50px" Style="{StaticResource TexBoxBorder}">
+                        <TextBox Text="19,95"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <StackPanel Grid.Column="0" Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Margin="5" Style="{StaticResource ButtonOnTabs}" Content="{x:Static resx:TabsResources.rxWystawFaktureZapisz}" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <Button Margin="5" Style="{StaticResource ButtonOnTabs}" Content="{x:Static resx:TabsResources.rxWystawFaktureAnuluj}"/>
+            <Button Margin="5" Style="{StaticResource ButtonOnTabs}" Content="{x:Static resx:TabsResources.rxWystawFakturePomoc}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

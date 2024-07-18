@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Projekt.Views.ListaFakturView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Projekt.Views"
+             xmlns:vm="clr-namespace:Projekt.ViewModels"
+             xmlns:resx="clr-namespace:Projekt.Resources"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <ResourceDictionary Source="TabsResources.xaml"/>
+    </UserControl.Resources>
+    <d:UserControl.DataContext>
+        <vm:DodajKontrahentaViewModel/>
+    </d:UserControl.DataContext>
+    <Grid Background="#e1e1e1" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FFC7E8FD">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="auto"/>
+
+            </Grid.ColumnDefinitions>
+
+            <ComboBox Grid.Column="0" MinWidth="80px" Width="200" Style="{StaticResource ComboBoxBorder}" HorizontalAlignment="Center">
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxListaFakturDodaj}" IsSelected="True"/>
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxListaFakturDodFs}"/>
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxListaFakturDodRs}"/>
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxListaFakturDodFm}"/>
+            </ComboBox>
+             <Button Grid.Column="1"  Content="{x:Static resx:TabsResources.rxPopraw}" HorizontalAlignment="Center" 
+                    Style="{StaticResource ButtonOnTabs}"/>
+            <Button Grid.Column="2"  Content="{x:Static resx:TabsResources.rxPokaż}" HorizontalAlignment="Center" 
+                    Style="{StaticResource ButtonOnTabs}"/>
+            <Button Grid.Column="3"  Content="{x:Static resx:TabsResources.rxListaFakturRozlicz}" HorizontalAlignment="Center" 
+                    Style="{StaticResource ButtonOnTabs}"/>
+            <Button Grid.Column="4"  Content="{x:Static resx:TabsResources.rxListaFakturKoryguj}" HorizontalAlignment="Center" 
+                    Style="{StaticResource ButtonOnTabs}"/>
+        </Grid>
+        <DataGrid Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaFakturKolStatus}" />
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaFakturKolStatusFis}"/>
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaFakturKolData}"/>
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaFakturKolNumer}"/>
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaFakturKolKontrahent}"/>
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaFakturKolWartoscNetto}" />
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaFakturKolWartoscBrutto}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

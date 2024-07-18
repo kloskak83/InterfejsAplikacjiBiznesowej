@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="Projekt.Views.ListaKontrahentowView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Projekt.Views"
+             xmlns:vm="clr-namespace:Projekt.ViewModels"
+             xmlns:resx="clr-namespace:Projekt.Resources"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <ResourceDictionary Source="TabsResources.xaml"/>
+    </UserControl.Resources>
+    <d:UserControl.DataContext>
+        <vm:DodajKontrahentaViewModel/>
+    </d:UserControl.DataContext>
+    <Grid Background="#e1e1e1" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FFC7E8FD">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="auto"/>
+                
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"  Content="{x:Static resx:TabsResources.rxDodaj}" HorizontalAlignment="Center" 
+                    Style="{StaticResource ButtonOnTabs}"/>
+            <Button Grid.Column="1"  Content="{x:Static resx:TabsResources.rxPopraw}" HorizontalAlignment="Center" 
+                    Style="{StaticResource ButtonOnTabs}"/>
+            <Button Grid.Column="2"  Content="{x:Static resx:TabsResources.rxPokaż}" HorizontalAlignment="Center" 
+                    Style="{StaticResource ButtonOnTabs}"/>
+
+            <ComboBox Grid.Column="3" MinWidth="80px" Width="200" Style="{StaticResource ComboBoxBorder}" HorizontalAlignment="Center">
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxWypiszDokument}" IsSelected="True"/>
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxWypiszDokument_FaktureVatSprze}"/>
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxWypiszDokument_ParagonImienny}"/>
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxWypiszDokument_Rachunek}"/>
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxWypiszDokument_ZamowienieDoDostawcy}"/>
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxWypiszDokument_ZamowienieOdKlienta}"/>
+            </ComboBox>
+
+            <Button Grid.Column="4"  Content="{x:Static resx:TabsResources.rxDopiszNotatke}" HorizontalAlignment="Center" 
+                    Style="{StaticResource ButtonOnTabs}"/>
+        </Grid>
+        <DataGrid Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaKontrahentowTyp}" />
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaKontrahentowRodzaj}"/>
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaKontrahentowSymbol}"/>
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaKontrahentowNazwa}"/>
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaKontrahentowNip}"/>
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaKontrahentowAdres}" />
+                <DataGridTextColumn Header="{x:Static resx:TabsResources.rxListaKontrahentowMiejscowosc}"/>              
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

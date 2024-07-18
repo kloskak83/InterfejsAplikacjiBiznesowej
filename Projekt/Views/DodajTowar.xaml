@@ -1,0 +1,153 @@
+﻿<UserControl x:Class="Projekt.Views.DodajTowar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Projekt.Views"
+             xmlns:vm="clr-namespace:Projekt.ViewModels"
+             xmlns:resx="clr-namespace:Projekt.Resources"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <ResourceDictionary Source="TabsResources.xaml"/>
+    </UserControl.Resources>
+    <d:UserControl.DataContext>
+        <vm:DodajKontrahentaViewModel/>
+    </d:UserControl.DataContext>
+
+    <Grid Background="#e1e1e1" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="15px"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{x:Static resx:TabsResources.rxSymbol}" Width="100"/>
+            <WrapPanel Grid.Row="0" Grid.Column="1" Style="{StaticResource TabWrapPanel}" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource TexBoxBorder}" Width="200">
+                    <TextBox Text="Symbol" />
+                </Border>
+                <Label Grid.Row="0" Grid.Column="0" Content="{x:Static resx:TabsResources.rxRodzaj}" Width="100"/>
+                <ComboBox MinWidth="180px"  Style="{StaticResource ComboBoxBorder}">
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.rxTowar}" IsSelected="True"/>
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.rxKomplet}"/>
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.rxUsluga}"/>
+                </ComboBox>
+            </WrapPanel>
+
+            <Button  Grid.Column="2" Grid.Row="0" Width="50" Height="50" Grid.RowSpan="2" Margin="10" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="/Icons/aparat.png" Width="50" Height="50" HorizontalAlignment="Center" 
+                           VerticalAlignment="Center" />
+            </Button>
+            <Label Grid.Row="1" Grid.Column="0" Content="{x:Static resx:TabsResources.rxNazwa}" />
+            <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource TexBoxBorder}">
+                <TextBox Text="Nazwa towaru" />
+            </Border>
+        </Grid>
+        <!-- Koniec naglowkowego -->
+
+        <Separator Grid.Row="1" Grid.Column="0"  Style="{StaticResource TabsSeparator}"/>
+        <Grid Grid.Row="2" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120px"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{x:Static resx:TabsResources.rxTowarOpis}" VerticalAlignment="Top"/>
+            <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource TexBoxBorder}"  MinHeight="60">
+                <TextBox Text="Opis towaru" TextWrapping="Wrap" AcceptsReturn="True" VerticalContentAlignment="Top" Padding="5,5,5,0" />
+            </Border>
+            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static resx:TabsResources.rxTowarPKWiU}" VerticalAlignment="Center"/>
+            <Border Grid.Column="1"  Grid.Row="1" MinWidth="100px" Style="{StaticResource TexBoxBorder}">
+                <TextBox Text="01.11.11.1 Przenica durum " />
+            </Border>
+            <Label Grid.Column="0" Grid.Row="2" Content="{x:Static resx:TabsResources.rxTowarKodTowaruCN}" VerticalAlignment="Center"/>
+            <Border Grid.Column="1"  Grid.Row="2" MinWidth="100px" Style="{StaticResource TexBoxBorder}">
+                <TextBox Text="2710 19 43 Oleje napędowoe z ropy naftowej lub z minerałów bitumicznych" />
+            </Border>
+            <Label Grid.Column="0" Grid.Row="3" Content="{x:Static resx:TabsResources.rxTowarStawkaVat}" VerticalAlignment="Center"/>
+
+            <Grid Grid.Column="1" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <ComboBox  MinWidth="200" Style="{StaticResource ComboBoxBorder}">
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.nrTowarPodstawowyPodatek23}" IsSelected="True"/>
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.nrTowarPodatek8}"/>
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.nrTowarPodatek5}"/>
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.nrTowarPodatek0}"/>                    
+                </ComboBox>
+                <Label Grid.Column="1" Content="{x:Static resx:TabsResources.rxTowarSWW}" Style="{StaticResource LabelNameInside}" HorizontalAlignment="Right"/>
+                <Border Grid.Column="2"  MinWidth="200px" Style="{StaticResource TexBoxBorder}">
+                    <TextBox Text="" />
+                </Border>     
+
+            </Grid>
+
+            <Label Grid.Column="0" Grid.Row="4" Content="{x:Static resx:TabsResources.rxTowarOznJPKVAT}" VerticalAlignment="Center"/>
+            
+            <ComboBox Grid.Column="1" Grid.Row="4" MinWidth="100"  Style="{StaticResource ComboBoxBorder}" HorizontalAlignment="Stretch">
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxTowarJPKVAT_NieWymaga}" IsSelected="True"/>
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxTowarJPKVAT_01}"/>
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxTowarJPKVAT_02}"/>
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxTowarJPKVAT_03}"/>                    
+                <ComboBoxItem Content="{x:Static resx:TabsResources.rxTowarJPKVAT_04}"/>                    
+            </ComboBox>
+
+            <WrapPanel  Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource TabWrapPanel}" HorizontalAlignment="Stretch" VerticalAlignment="Center" >
+                <Label Content="{x:Static resx:TabsResources.rxTowarPodsJednostka}" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                <ComboBox MinWidth="100"  Style="{StaticResource ComboBoxBorder}" HorizontalAlignment="Stretch" Margin="30,5,5,5">
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.rxTowarSzt}" IsSelected="True"/>
+                    <ComboBoxItem Content="{x:Static resx:TabsResources.rxTowarKpl}"/>
+                </ComboBox>
+            </WrapPanel>
+            <DataGrid  Grid.Column="0" Grid.Row="6"  Grid.ColumnSpan="2"  AutoGenerateColumns="False" Margin="5">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxTowarCennikNazwaCeny}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxTowarCennikNetto}" />
+                    <DataGridTextColumn Header="{x:Static resx:TabsResources.rxTowarCennikBrutto}" />
+                    <DataGridTextColumn  Header="{x:Static resx:TabsResources.rxTowarCennikNazwaWaluta}" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Grid.Column="1" Grid.Row="7" Content="{x:Static resx:TabsResources.rxTowarKalkulacjaCen}" HorizontalAlignment="Right" 
+                    Style="{StaticResource ButtonOnTabs}" Margin="5"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+        
+
+    </Grid>
+</UserControl>
